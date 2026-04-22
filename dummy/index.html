@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ↓ Change page title here -->
+  <title>Royalswad – DEEPA Enterprises | Premium Indian Spices</title>
+
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Fonts — change fonts here (update style.css font-family too) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body >
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+  <!-- Change href number to your WhatsApp number: wa.me/[country-code][number] -->
+  <a href="https://wa.me/917262038383" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <!-- Change logo image src here -->
+      <img src="images/logo.jpeg" alt="Royalswad Logo">
+      <div class="nav-brand">
+        <!-- Change brand name and tagline here -->
+        <span>Royalswad</span>
+        <span>DEEPA Enterprises</span>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#categories">Products</a></li>
+      <li><a href="#enquiry">Enquiry</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+
+    <div class="nav-contact">
+      <!-- Change phone number here -->
+      <a href="tel:+917262038383">
+        <i class="fa-solid fa-phone"></i>+91 72620 38383
+      </a>
+      <select class="lang-select">
+        <option value="en">English</option>
+        <option value="mr">मराठी</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Slide-Down Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero"       class="mob-link">Home</a>
+    <a href="#about"      class="mob-link">About Us</a>
+    <a href="#categories" class="mob-link">Products</a>
+    <a href="#enquiry"    class="mob-link">Enquiry</a>
+    <a href="#footer"     class="mob-link">Contact</a>
+    <div class="mob-contact">
+      <!-- Change contact details here -->
+      <a href="tel:+917262038383">
+        <i class="fa-solid fa-phone"></i>+91 72620 38383
+      </a>
+      <a href="tel:+919119569019">
+        <i class="fa-solid fa-phone"></i>+91 91195 69019
+      </a>
+      <a href="mailto:Royalswad1987@gmail.com">
+        <i class="fa-solid fa-envelope"></i>Royalswad1987@gmail.com
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <!-- Hero background image is set in style.css → .hero-bg { background: url(...) } -->
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+
+    <div class="hero-content">
+      <!-- Change tagline / established year here -->
+      <div class="hero-tag">Est. 2016 — DEEPA Enterprises</div>
+
+      <!-- Change hero headline here -->
+      <h1 class="hero-heading">
+        <span>A Legacy</span>
+        <span><em>Of Taste</em></span>
+        <span>&amp; Purity</span>
+      </h1>
+
+      <div class="hero-bottom">
+        <!-- Change hero description here -->
+        <p class="hero-desc">
+          Premium Indian spices, ready-to-eat, dehydrated, and artisan masala blends —
+          crafted with tradition, delivered with uncompromised quality.
+        </p>
+        <div class="hero-cta">
+          <a href="#categories" class="btn btn-primary">Explore Products</a>
+          <a href="#enquiry"    class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about">
+    <div class="about-text reveal">
+      <div class="section-tag">Our Story</div>
+      <!-- Change about title here -->
+      <h2 class="section-title">Rooted in <em>Tradition,</em><br>Driven by Quality</h2>
+
+      <!-- Change about paragraphs here -->
+      <p>DEEPA Enterprises, the makers of Royalswad, has been crafting premium-quality spices,
+         ready-to-eat, ready-to-cook, and dehydrated products since our founding. Every product
+         is made with authentic ingredients and rigorous hygiene standards.</p>
+      <p>We are committed to delivering the real taste of India — from your kitchen to every
+         corner of the world.</p>
+
+      <!-- Change stats here -->
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Premium Products</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Natural Ingredients</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">ISO</div>
+          <div class="stat-label">Quality Certified</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-image reveal">
+      <!-- Change about image here -->
+      <img src="images/image5.jpg" alt="Royalswad products">
+      <!-- Change quote caption here -->
+      <div class="about-image-tag">"Authentic taste with uncompromised quality."</div>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES SECTION ===== -->
+  <section id="categories">
+    <div class="section-header reveal">
+      <div class="section-tag">What We Offer</div>
+      <h2 class="section-title">Our <em>Product</em> Categories</h2>
+      <p class="section-sub">Three pillars of authentic Indian food craft — each made to perfection.</p>
+    </div>
+
+    <div class="categories-grid">
+
+      <!-- Category 1 — change image, title, description -->
+      <div class="category-card reveal">
+        <div class="category-number">01</div>
+        <img src="images/image1.jpg" alt="Indian Spices">
+        <div class="category-overlay">
+          <div class="category-label">Authentic<br>Indian Spices</div>
+          <p class="category-desc">Rich, vibrant flavors of traditional Indian spices — from earthy cumin
+            and sweet cardamom to fiery chilli, coriander, turmeric, and whole masala blends.</p>
+          <a href="#enquiry" class="category-btn">Enquire Now →</a>
+        </div>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="category-card reveal">
+        <div class="category-number">02</div>
+        <img src="images/image2.jpg" alt="Ready to Eat & Cook">
+        <div class="category-overlay">
+          <div class="category-label">Ready to<br>Eat &amp; Cook</div>
+          <p class="category-desc">Delicious ready-to-eat snacks and easy ready-to-cook ingredients.
+            Gourmet flavors without the hours in the kitchen.</p>
+          <a href="#enquiry" class="category-btn">Enquire Now →</a>
+        </div>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="category-card reveal">
+        <div class="category-number">03</div>
+        <img src="images/image3.jpg" alt="Dehydrated Products">
+        <div class="category-overlay">
+          <div class="category-label">Dehydrated<br>Products</div>
+          <p class="category-desc">Enjoy ultimate convenience without losing any flavor. Available as whole,
+            flakes, powders, minced or chopped — in all sizes to fit your recipe.</p>
+          <a href="#enquiry" class="category-btn">Enquire Now →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS ===== -->
+  <section id="products">
+    <div class="section-header reveal">
+      <div class="section-tag" style="color:var(--gold)">Featured Products</div>
+      <h2 class="section-title">Our <em>Finest</em> Selections</h2>
+      <p class="section-sub">Handpicked ingredients crafted for maximum freshness and authentic flavor.</p>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- Product cards — change image, tag, name, description for each -->
+
+      <div class="product-card reveal">
+        <div class="product-card-img"><img src="images/img6.jpeg" alt="Dehydrated Garlic"></div>
+        <div class="product-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="product-card-body">
+          <div class="product-card-tag">Dehydrated</div>
+          <div class="product-card-name">Dehydrated Garlic</div>
+          <p class="product-card-desc">Savory garlic flavor in seconds. Pre-peeled, ready to crush, mince, or toss into sauces.</p>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-card-img"><img src="images/img9.jpeg" alt="White Onion Shreds"></div>
+        <div class="product-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="product-card-body">
+          <div class="product-card-tag">Dehydrated</div>
+          <div class="product-card-name">White Onion Shreds</div>
+          <p class="product-card-desc">No tears, no hassle. Add sweet, classic onion flavor instantly to soups, curries, and more.</p>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-card-img"><img src="images/img8.jpeg" alt="Forest Mushroom Mix"></div>
+        <div class="product-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="product-card-body">
+          <div class="product-card-tag">Ready to Cook</div>
+          <div class="product-card-name">Forest Mushroom Mix</div>
+          <p class="product-card-desc">Bring gourmet, earthy flavors to your kitchen. Rehydrate quickly for hearty soups and risottos.</p>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-card-img"><img src="images/img7.jpeg" alt="Banana Chips"></div>
+        <div class="product-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="product-card-body">
+          <div class="product-card-tag">Ready to Eat</div>
+          <div class="product-card-name">Banana Chips</div>
+          <p class="product-card-desc">Golden, crispy, and perfectly spiced. A snack ready anytime — great for lunchboxes or movie nights.</p>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-card-img"><img src="images/img10.png" alt="Premium Whole Spices"></div>
+        <div class="product-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="product-card-body">
+          <div class="product-card-tag">Spices</div>
+          <div class="product-card-name">Premium Whole Spices</div>
+          <p class="product-card-desc">Handpicked and carefully sourced for maximum freshness and aroma. Bold, authentic flavors in purest form.</p>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-card-img"><img src="images/img11.png" alt="Signature Masala Blend"></div>
+        <div class="product-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="product-card-body">
+          <div class="product-card-tag">Masala</div>
+          <div class="product-card-name">Signature Masala Blend</div>
+          <p class="product-card-desc">Perfectly balanced hand-selected spices crafted for rich, unforgettable taste. Warmth in every meal.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section id="why">
+    <div class="section-header reveal">
+      <div class="section-tag">Why Choose Us</div>
+      <h2 class="section-title">Quality You Can <em>Trust</em></h2>
+    </div>
+
+    <div class="why-grid">
+
+      <!-- Change icon (Font Awesome class), title, and description for each card -->
+
+      <div class="why-card reveal">
+        <div class="why-icon"><i class="fa-solid fa-leaf"></i></div>
+        <div class="why-title">100% Natural</div>
+        <p class="why-desc">No artificial colors, preservatives, or additives. Pure ingredients, pure taste.</p>
+      </div>
+
+      <div class="why-card reveal">
+        <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="why-title">Hygiene Certified</div>
+        <p class="why-desc">Manufactured under strict hygiene and quality control standards.</p>
+      </div>
+
+      <div class="why-card reveal">
+        <div class="why-icon"><i class="fa-solid fa-award"></i></div>
+        <div class="why-title">10+ Years Legacy</div>
+        <p class="why-desc">Decades of experience crafting authentic Indian flavors trusted by families.</p>
+      </div>
+
+      <div class="why-card reveal">
+        <div class="why-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <div class="why-title">Bulk Supply</div>
+        <p class="why-desc">Reliable bulk orders for retailers, restaurants, and export clients worldwide.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ENQUIRY SECTION ===== -->
+  <section id="enquiry">
+    <!-- Change heading here -->
+    <h2 class="enquiry-title">Get in <em>Touch</em> With Us</h2>
+    <p class="enquiry-sub">Interested in our products? Send your enquiry and we'll get back to you within 24 hours.</p>
+
+    <div class="enquiry-form">
+      <input type="text" placeholder="Your Name"         id="eq-name">
+      <input type="tel"  placeholder="Your Phone Number" id="eq-phone">
+    </div>
+    <div class="enquiry-product-wrap">
+      <input class="enquiry-product-input" type="text"
+             placeholder="Product you're interested in..."
+             id="eq-product">
+    </div>
+    <div class="enquiry-send-wrap">
+      <button class="btn btn-primary" id="sendEnquiry">Send Enquiry via WhatsApp</button>
+    </div>
+
+    <!-- Change contact details here -->
+    <div class="enquiry-contact">
+      <div class="enquiry-contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+917262038383">+91 72620 38383</a>
+      </div>
+      <div class="enquiry-contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+919119569019">+91 91195 69019</a>
+      </div>
+      <div class="enquiry-contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:Royalswad1987@gmail.com">Royalswad1987@gmail.com</a>
+      </div>
+      <div class="enquiry-contact-item">
+        <i class="fa-solid fa-clock"></i>
+        <span>Mon – Sat, 10AM – 6PM</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-grid">
+
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <img src="images/logo.jpeg" alt="Royalswad">
+        <!-- Change brand name/tagline below -->
+        <div class="footer-brand-name">Royalswad</div>
+        <div class="footer-brand-sub">DEEPA Enterprises</div>
+        <p>Rooted in tradition, driven by quality. Manufacturing premium spices, RTE, RTC,
+           and dehydrated products with uncompromised hygiene since 2016.</p>
+        <!-- Change social links here (replace # with actual URLs) -->
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/917262038383" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#categories">Products</a></li>
+          <li><a href="#enquiry">Enquiry</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Products list — add or remove items as needed -->
+      <div>
+        <div class="footer-col-title">Products</div>
+        <ul class="footer-links">
+          <li><a href="#">Dehydrated White Onion</a></li>
+          <li><a href="#">Dehydrated Red Onion</a></li>
+          <li><a href="#">Dehydrated Garlic</a></li>
+          <li><a href="#">Indian Spices</a></li>
+          <li><a href="#">Masala Blends</a></li>
+          <li><a href="#">Frozen Products</a></li>
+          <li><a href="#">RTE &amp; RTC Range</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Details — change below -->
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <span>
+            <a href="tel:+917262038383">+91 72620 38383</a><br>
+            <a href="tel:+919119569019">+91 91195 69019</a>
+          </span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span><a href="mailto:Royalswad1987@gmail.com">Royalswad1987@gmail.com</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Mon – Sat<br>10:00 AM – 6:00 PM</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-box"></i>
+          <span>All types of Masala, RTE, RTC, Dehydrated &amp; By-Products</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Change copyright year / name / designer credit below -->
+    <div class="footer-bottom">
+      <span>© 2016 DEEPA Enterprises (Royalswad). All Rights Reserved.</span>
+      <span>Developed by <a href="#">P_Shinde Developers</a></span>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>

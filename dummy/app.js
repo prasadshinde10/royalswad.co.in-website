@@ -1,0 +1,134 @@
+/* ============================================================
+   ROYALSWAD — DEEPA Enterprises | app.js
+   ============================================================
+   CUSTOMISATION GUIDE:
+   - Change WhatsApp number: search "wa.me" and replace the number
+   - Change business hours / enquiry message: search "sendEnquiry"
+   - Disable custom cursor: comment out the CURSOR section
+   ============================================================ */
+
+/* ===== CUSTOM CURSOR (desktop only) ===== */
+const cursor    = document.getElementById('cursor');
+const cursorRing = document.getElementById('cursorRing');
+let mx = 0, my = 0, rx = 0, ry = 0;
+
+document.addEventListener('mousemove', e => {
+  mx = e.clientX;
+  my = e.clientY;
+});
+
+function animateCursor() {
+  // Smooth lag for the ring
+  rx += (mx - rx) * 0.15;
+  ry += (my - ry) * 0.15;
+  if (cursor)     { cursor.style.left = mx + 'px'; cursor.style.top = my + 'px'; }
+  if (cursorRing) { cursorRing.style.left = rx + 'px'; cursorRing.style.top = ry + 'px'; }
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+// Enlarge cursor on interactive elements
+document.querySelectorAll('a, button, .category-card, .product-card, .why-card').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor?.classList.add('hover');
+    cursorRing?.classList.add('hover');
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor?.classList.remove('hover');
+    cursorRing?.classList.remove('hover');
+  });
+});
+
+
+/* ===== NAVBAR — turns dark on scroll ===== */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+
+/* ===== MOBILE HAMBURGER MENU ===== */
+const hamburger  = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+
+// Close menu when any link is clicked
+document.querySelectorAll('.mob-link').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+});
+
+
+/* ===== SCROLL REVEAL ANIMATIONS ===== */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Small delay so multiple elements in view don't all pop at once
+      setTimeout(() => entry.target.classList.add('visible'), 100);
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Stagger children inside grids
+document.querySelectorAll('.products-grid, .categories-grid, .why-grid').forEach(grid => {
+  grid.querySelectorAll('.reveal').forEach((child, i) => {
+    child.style.transitionDelay = (i * 0.1) + 's';
+  });
+});
+
+
+/* ===== WHATSAPP ENQUIRY FORM ===== */
+// ↓ Change this phone number to your WhatsApp business number
+const WHATSAPP_NUMBER = '917262038383';
+
+document.getElementById('sendEnquiry')?.addEventListener('click', () => {
+  const name    = document.getElementById('eq-name').value.trim();
+  const phone   = document.getElementById('eq-phone').value.trim();
+  const product = document.getElementById('eq-product').value.trim();
+
+  if (!name || !phone) {
+    alert('Please enter your name and phone number.');
+    return;
+  }
+
+  // ↓ Customise this message template as needed
+  const message = encodeURIComponent(
+    `Hello Royalswad!\n\nName: ${name}\nPhone: ${phone}\nProduct Enquiry: ${product || 'General Enquiry'}\n\nPlease share more details about your products.`
+  );
+
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
+});
+
+
+/* ===== SMOOTH ANCHOR SCROLL ===== */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+
+/* ===== LANGUAGE SWITCHER ===== */
+// Basic switcher — connect to your i18n system or expand as needed
+document.querySelector('.lang-select')?.addEventListener('change', function () {
+  const lang = this.value;
+  console.log('Language changed to:', lang);
+  // TODO: add translation logic here
+  // Example: loadTranslations(lang);
+});
+document.addEventListener("contextmenu",function(e){
+  e.preventDefault()
+},false)
