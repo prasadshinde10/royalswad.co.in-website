@@ -4,26 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ↓ Change page title here -->
   <title>Royalswad – DEEPA Enterprises | Premium Indian Spices</title>
 
   <!-- Font Awesome Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-  <!-- Google Fonts — change fonts here (update style.css font-family too) -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body >
+<body>
 
   <!-- ===== CUSTOM CURSOR ===== -->
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
   <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
-  <!-- Change href number to your WhatsApp number: wa.me/[country-code][number] -->
   <a href="https://wa.me/917262038383" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
@@ -31,33 +29,31 @@
   <!-- ===== NAVIGATION ===== -->
   <nav id="navbar">
     <div class="nav-logo">
-      <!-- Change logo image src here -->
       <img src="images/logo.jpeg" alt="Royalswad Logo">
       <div class="nav-brand">
-        <!-- Change brand name and tagline here -->
         <span>Royalswad</span>
         <span>DEEPA Enterprises</span>
       </div>
     </div>
 
     <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#categories">Products</a></li>
-      <li><a href="#enquiry">Enquiry</a></li>
-      <li><a href="#footer">Contact</a></li>
+      <li><a href="#hero"       data-i18n="nav.home">Home</a></li>
+      <li><a href="#about"      data-i18n="nav.about">About</a></li>
+      <li><a href="#categories" data-i18n="nav.products">Products</a></li>
+      <li><a href="#enquiry"    data-i18n="nav.enquiry">Enquiry</a></li>
+      <li><a href="#footer"     data-i18n="nav.contact">Contact</a></li>
     </ul>
 
     <div class="nav-contact">
-      <!-- Change phone number here -->
       <a href="tel:+917262038383">
         <i class="fa-solid fa-phone"></i>+91 72620 38383
       </a>
-      <select class="lang-select">
-        <option value="en">English</option>
-        <option value="mr">मराठी</option>
-        <option value="hi">हिन्दी</option>
-      </select>
+      <!-- Language Switcher -->
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="hi">HI</button>
+        <button class="lang-btn" data-lang="mr">MR</button>
+      </div>
     </div>
 
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -67,13 +63,12 @@
 
   <!-- Mobile Slide-Down Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#hero"       class="mob-link">Home</a>
-    <a href="#about"      class="mob-link">About Us</a>
-    <a href="#categories" class="mob-link">Products</a>
-    <a href="#enquiry"    class="mob-link">Enquiry</a>
-    <a href="#footer"     class="mob-link">Contact</a>
+    <a href="#hero"       class="mob-link" data-i18n="nav.home">Home</a>
+    <a href="#about"      class="mob-link" data-i18n="mob.about">About Us</a>
+    <a href="#categories" class="mob-link" data-i18n="nav.products">Products</a>
+    <a href="#enquiry"    class="mob-link" data-i18n="nav.enquiry">Enquiry</a>
+    <a href="#footer"     class="mob-link" data-i18n="nav.contact">Contact</a>
     <div class="mob-contact">
-      <!-- Change contact details here -->
       <a href="tel:+917262038383">
         <i class="fa-solid fa-phone"></i>+91 72620 38383
       </a>
@@ -83,42 +78,44 @@
       <a href="mailto:Royalswad1987@gmail.com">
         <i class="fa-solid fa-envelope"></i>Royalswad1987@gmail.com
       </a>
+      <!-- Language switcher for mobile -->
+      <div class="lang-switcher lang-switcher-mobile">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="hi">HI</button>
+        <button class="lang-btn" data-lang="mr">MR</button>
+      </div>
     </div>
   </div>
 
   <!-- ===== HERO SECTION ===== -->
   <section id="hero">
     <div class="hero-bg"></div>
-    <!-- Hero background image is set in style.css → .hero-bg { background: url(...) } -->
     <div class="hero-overlay"></div>
     <div class="hero-grain"></div>
 
     <div class="hero-content">
-      <!-- Change tagline / established year here -->
-      <div class="hero-tag">Est. 2016 — DEEPA Enterprises</div>
+      <div class="hero-tag" data-i18n="hero.tag">Est. 2016 — DEEPA Enterprises</div>
 
-      <!-- Change hero headline here -->
       <h1 class="hero-heading">
-        <span>A Legacy</span>
-        <span><em>Of Taste</em></span>
-        <span>&amp; Purity</span>
+        <span data-i18n="hero.line1">A Legacy</span>
+        <span data-i18n-html="hero.line2"><em>Of Taste</em></span>
+        <span data-i18n="hero.line3">&amp; Purity</span>
       </h1>
 
       <div class="hero-bottom">
-        <!-- Change hero description here -->
-        <p class="hero-desc">
+        <p class="hero-desc" data-i18n="hero.desc">
           Premium Indian spices, ready-to-eat, dehydrated, and artisan masala blends —
           crafted with tradition, delivered with uncompromised quality.
         </p>
         <div class="hero-cta">
-          <a href="#categories" class="btn btn-primary">Explore Products</a>
-          <a href="#enquiry"    class="btn btn-outline">Get in Touch</a>
+          <a href="#categories" class="btn btn-primary" data-i18n="hero.explore">Explore Products</a>
+          <a href="#enquiry"    class="btn btn-outline"  data-i18n="hero.touch">Get in Touch</a>
         </div>
       </div>
     </div>
 
     <div class="hero-scroll">
-      <span>Scroll</span>
+      <span data-i18n="hero.scroll">Scroll</span>
       <div class="scroll-line"></div>
     </div>
   </section>
@@ -126,89 +123,81 @@
   <!-- ===== ABOUT SECTION ===== -->
   <section id="about">
     <div class="about-text reveal">
-      <div class="section-tag">Our Story</div>
-      <!-- Change about title here -->
-      <h2 class="section-title">Rooted in <em>Tradition,</em><br>Driven by Quality</h2>
+      <div class="section-tag" data-i18n="about.tag">Our Story</div>
+      <h2 class="section-title" data-i18n-html="about.heading">Rooted in <em>Tradition,</em><br>Driven by Quality</h2>
 
-      <!-- Change about paragraphs here -->
-      <p>DEEPA Enterprises, the makers of Royalswad, has been crafting premium-quality spices,
+      <p data-i18n="about.p1">DEEPA Enterprises, the makers of Royalswad, has been crafting premium-quality spices,
          ready-to-eat, ready-to-cook, and dehydrated products since our founding. Every product
          is made with authentic ingredients and rigorous hygiene standards.</p>
-      <p>We are committed to delivering the real taste of India — from your kitchen to every
+      <p data-i18n="about.p2">We are committed to delivering the real taste of India — from your kitchen to every
          corner of the world.</p>
 
-      <!-- Change stats here -->
       <div class="about-stats">
         <div class="stat">
           <div class="stat-num">10+</div>
-          <div class="stat-label">Years of Experience</div>
+          <div class="stat-label" data-i18n="about.stat.experience">Years of Experience</div>
         </div>
         <div class="stat">
           <div class="stat-num">50+</div>
-          <div class="stat-label">Premium Products</div>
+          <div class="stat-label" data-i18n="about.stat.products">Premium Products</div>
         </div>
         <div class="stat">
           <div class="stat-num">100%</div>
-          <div class="stat-label">Natural Ingredients</div>
+          <div class="stat-label" data-i18n="about.stat.natural">Natural Ingredients</div>
         </div>
         <div class="stat">
           <div class="stat-num">ISO</div>
-          <div class="stat-label">Quality Certified</div>
+          <div class="stat-label" data-i18n="about.stat.certified">Quality Certified</div>
         </div>
       </div>
     </div>
 
     <div class="about-image reveal">
-      <!-- Change about image here -->
       <img src="images/image5.jpg" alt="Royalswad products">
-      <!-- Change quote caption here -->
-      <div class="about-image-tag">"Authentic taste with uncompromised quality."</div>
+      <div class="about-image-tag" data-i18n="about.quote">"Authentic taste with uncompromised quality."</div>
     </div>
   </section>
 
   <!-- ===== CATEGORIES SECTION ===== -->
   <section id="categories">
     <div class="section-header reveal">
-      <div class="section-tag">What We Offer</div>
-      <h2 class="section-title">Our <em>Product</em> Categories</h2>
-      <p class="section-sub">Three pillars of authentic Indian food craft — each made to perfection.</p>
+      <div class="section-tag" data-i18n="cat.tag">What We Offer</div>
+      <h2 class="section-title" data-i18n-html="cat.heading">Our <em>Product</em> Categories</h2>
+      <p class="section-sub" data-i18n="cat.sub">Three pillars of authentic Indian food craft — each made to perfection.</p>
     </div>
 
     <div class="categories-grid">
 
-      <!-- Category 1 — change image, title, description -->
       <div class="category-card reveal">
         <div class="category-number">01</div>
         <img src="images/image1.jpg" alt="Indian Spices">
         <div class="category-overlay">
-          <div class="category-label">Authentic<br>Indian Spices</div>
-          <p class="category-desc">Rich, vibrant flavors of traditional Indian spices — from earthy cumin
+          <div class="category-label" data-i18n-html="cat.1.label">Authentic<br>Indian Spices</div>
+          <p class="category-desc" data-i18n="cat.1.desc">Rich, vibrant flavors of traditional Indian spices — from earthy cumin
             and sweet cardamom to fiery chilli, coriander, turmeric, and whole masala blends.</p>
-          <a href="#enquiry" class="category-btn">Enquire Now →</a>
+          <a href="#enquiry" class="category-btn" data-i18n="cat.enquire">Enquire Now →</a>
         </div>
       </div>
 
-      <!-- Category 2 -->
       <div class="category-card reveal">
         <div class="category-number">02</div>
-        <img src="images/image2.jpg" alt="Ready to Eat & Cook">
+        <img src="images/image2.jpg" alt="Ready to Eat &amp; Cook">
         <div class="category-overlay">
-          <div class="category-label">Ready to<br>Eat &amp; Cook</div>
-          <p class="category-desc">Delicious ready-to-eat snacks and easy ready-to-cook ingredients.
+          <div class="category-label" data-i18n-html="cat.2.label">Ready to<br>Eat &amp; Cook</div>
+          <p class="category-desc" data-i18n="cat.2.desc">Delicious ready-to-eat snacks and easy ready-to-cook ingredients.
             Gourmet flavors without the hours in the kitchen.</p>
-          <a href="#enquiry" class="category-btn">Enquire Now →</a>
+          <a href="#enquiry" class="category-btn" data-i18n="cat.enquire">Enquire Now →</a>
         </div>
       </div>
 
-      <!-- Category 3 -->
       <div class="category-card reveal">
         <div class="category-number">03</div>
         <img src="images/image3.jpg" alt="Dehydrated Products">
         <div class="category-overlay">
-          <div class="category-label">Dehydrated<br>Products</div>
-          <p class="category-desc">Enjoy ultimate convenience without losing any flavor. Available as whole,
+          <div class="category-label" data-i18n-html="cat.3.label">Dehydrated<br>Products</div>
+          <p class="category-desc" data-i18n="cat.3.desc">Enjoy ultimate convenience without losing any flavor. Available as whole,
             flakes, powders, minced or chopped — in all sizes to fit your recipe.</p>
-          <a href="#enquiry" class="category-btn">Enquire Now →</a>
+          <a href="#enquiry" class="category-btn" data-i18n="cat.enquire">Enquire Now →</a>
         </div>
       </div>
 
@@ -218,22 +207,20 @@
   <!-- ===== FEATURED PRODUCTS ===== -->
   <section id="products">
     <div class="section-header reveal">
-      <div class="section-tag" style="color:var(--gold)">Featured Products</div>
-      <h2 class="section-title">Our <em>Finest</em> Selections</h2>
-      <p class="section-sub">Handpicked ingredients crafted for maximum freshness and authentic flavor.</p>
+      <div class="section-tag" style="color:var(--gold)" data-i18n="prod.tag">Featured Products</div>
+      <h2 class="section-title" data-i18n-html="prod.heading">Our <em>Finest</em> Selections</h2>
+      <p class="section-sub" data-i18n="prod.sub">Handpicked ingredients crafted for maximum freshness and authentic flavor.</p>
     </div>
 
     <div class="products-grid">
-
-      <!-- Product cards — change image, tag, name, description for each -->
 
       <div class="product-card reveal">
         <div class="product-card-img"><img src="images/img6.jpeg" alt="Dehydrated Garlic"></div>
         <div class="product-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
         <div class="product-card-body">
-          <div class="product-card-tag">Dehydrated</div>
-          <div class="product-card-name">Dehydrated Garlic</div>
-          <p class="product-card-desc">Savory garlic flavor in seconds. Pre-peeled, ready to crush, mince, or toss into sauces.</p>
+          <div class="product-card-tag"  data-i18n="prod.1.tag">Dehydrated</div>
+          <div class="product-card-name" data-i18n="prod.1.name">Dehydrated Garlic</div>
+          <p class="product-card-desc"   data-i18n="prod.1.desc">Savory garlic flavor in seconds. Pre-peeled, ready to crush, mince, or toss into sauces.</p>
         </div>
       </div>
 
@@ -241,9 +228,9 @@
         <div class="product-card-img"><img src="images/img9.jpeg" alt="White Onion Shreds"></div>
         <div class="product-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
         <div class="product-card-body">
-          <div class="product-card-tag">Dehydrated</div>
-          <div class="product-card-name">White Onion Shreds</div>
-          <p class="product-card-desc">No tears, no hassle. Add sweet, classic onion flavor instantly to soups, curries, and more.</p>
+          <div class="product-card-tag"  data-i18n="prod.2.tag">Dehydrated</div>
+          <div class="product-card-name" data-i18n="prod.2.name">White Onion Shreds</div>
+          <p class="product-card-desc"   data-i18n="prod.2.desc">No tears, no hassle. Add sweet, classic onion flavor instantly to soups, curries, and more.</p>
         </div>
       </div>
 
@@ -251,9 +238,9 @@
         <div class="product-card-img"><img src="images/img8.jpeg" alt="Forest Mushroom Mix"></div>
         <div class="product-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
         <div class="product-card-body">
-          <div class="product-card-tag">Ready to Cook</div>
-          <div class="product-card-name">Forest Mushroom Mix</div>
-          <p class="product-card-desc">Bring gourmet, earthy flavors to your kitchen. Rehydrate quickly for hearty soups and risottos.</p>
+          <div class="product-card-tag"  data-i18n="prod.3.tag">Ready to Cook</div>
+          <div class="product-card-name" data-i18n="prod.3.name">Forest Mushroom Mix</div>
+          <p class="product-card-desc"   data-i18n="prod.3.desc">Bring gourmet, earthy flavors to your kitchen. Rehydrate quickly for hearty soups and risottos.</p>
         </div>
       </div>
 
@@ -261,9 +248,9 @@
         <div class="product-card-img"><img src="images/img7.jpeg" alt="Banana Chips"></div>
         <div class="product-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
         <div class="product-card-body">
-          <div class="product-card-tag">Ready to Eat</div>
-          <div class="product-card-name">Banana Chips</div>
-          <p class="product-card-desc">Golden, crispy, and perfectly spiced. A snack ready anytime — great for lunchboxes or movie nights.</p>
+          <div class="product-card-tag"  data-i18n="prod.4.tag">Ready to Eat</div>
+          <div class="product-card-name" data-i18n="prod.4.name">Banana Chips</div>
+          <p class="product-card-desc"   data-i18n="prod.4.desc">Golden, crispy, and perfectly spiced. A snack ready anytime — great for lunchboxes or movie nights.</p>
         </div>
       </div>
 
@@ -271,9 +258,9 @@
         <div class="product-card-img"><img src="images/img10.png" alt="Premium Whole Spices"></div>
         <div class="product-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
         <div class="product-card-body">
-          <div class="product-card-tag">Spices</div>
-          <div class="product-card-name">Premium Whole Spices</div>
-          <p class="product-card-desc">Handpicked and carefully sourced for maximum freshness and aroma. Bold, authentic flavors in purest form.</p>
+          <div class="product-card-tag"  data-i18n="prod.5.tag">Spices</div>
+          <div class="product-card-name" data-i18n="prod.5.name">Premium Whole Spices</div>
+          <p class="product-card-desc"   data-i18n="prod.5.desc">Handpicked and carefully sourced for maximum freshness and aroma. Bold, authentic flavors in purest form.</p>
         </div>
       </div>
 
@@ -281,9 +268,9 @@
         <div class="product-card-img"><img src="images/img11.png" alt="Signature Masala Blend"></div>
         <div class="product-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
         <div class="product-card-body">
-          <div class="product-card-tag">Masala</div>
-          <div class="product-card-name">Signature Masala Blend</div>
-          <p class="product-card-desc">Perfectly balanced hand-selected spices crafted for rich, unforgettable taste. Warmth in every meal.</p>
+          <div class="product-card-tag"  data-i18n="prod.6.tag">Masala</div>
+          <div class="product-card-name" data-i18n="prod.6.name">Signature Masala Blend</div>
+          <p class="product-card-desc"   data-i18n="prod.6.desc">Perfectly balanced hand-selected spices crafted for rich, unforgettable taste. Warmth in every meal.</p>
         </div>
       </div>
 
@@ -293,36 +280,34 @@
   <!-- ===== WHY CHOOSE US ===== -->
   <section id="why">
     <div class="section-header reveal">
-      <div class="section-tag">Why Choose Us</div>
-      <h2 class="section-title">Quality You Can <em>Trust</em></h2>
+      <div class="section-tag" data-i18n="why.tag">Why Choose Us</div>
+      <h2 class="section-title" data-i18n-html="why.heading">Quality You Can <em>Trust</em></h2>
     </div>
 
     <div class="why-grid">
 
-      <!-- Change icon (Font Awesome class), title, and description for each card -->
-
       <div class="why-card reveal">
         <div class="why-icon"><i class="fa-solid fa-leaf"></i></div>
-        <div class="why-title">100% Natural</div>
-        <p class="why-desc">No artificial colors, preservatives, or additives. Pure ingredients, pure taste.</p>
+        <div class="why-title" data-i18n="why.1.title">100% Natural</div>
+        <p class="why-desc"   data-i18n="why.1.desc">No artificial colors, preservatives, or additives. Pure ingredients, pure taste.</p>
       </div>
 
       <div class="why-card reveal">
         <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
-        <div class="why-title">Hygiene Certified</div>
-        <p class="why-desc">Manufactured under strict hygiene and quality control standards.</p>
+        <div class="why-title" data-i18n="why.2.title">Hygiene Certified</div>
+        <p class="why-desc"   data-i18n="why.2.desc">Manufactured under strict hygiene and quality control standards.</p>
       </div>
 
       <div class="why-card reveal">
         <div class="why-icon"><i class="fa-solid fa-award"></i></div>
-        <div class="why-title">10+ Years Legacy</div>
-        <p class="why-desc">Decades of experience crafting authentic Indian flavors trusted by families.</p>
+        <div class="why-title" data-i18n="why.3.title">10+ Years Legacy</div>
+        <p class="why-desc"   data-i18n="why.3.desc">Decades of experience crafting authentic Indian flavors trusted by families.</p>
       </div>
 
       <div class="why-card reveal">
         <div class="why-icon"><i class="fa-solid fa-truck-fast"></i></div>
-        <div class="why-title">Bulk Supply</div>
-        <p class="why-desc">Reliable bulk orders for retailers, restaurants, and export clients worldwide.</p>
+        <div class="why-title" data-i18n="why.4.title">Bulk Supply</div>
+        <p class="why-desc"   data-i18n="why.4.desc">Reliable bulk orders for retailers, restaurants, and export clients worldwide.</p>
       </div>
 
     </div>
@@ -330,24 +315,22 @@
 
   <!-- ===== ENQUIRY SECTION ===== -->
   <section id="enquiry">
-    <!-- Change heading here -->
-    <h2 class="enquiry-title">Get in <em>Touch</em> With Us</h2>
-    <p class="enquiry-sub">Interested in our products? Send your enquiry and we'll get back to you within 24 hours.</p>
+    <h2 class="enquiry-title" data-i18n-html="enquiry.heading">Get in <em>Touch</em> With Us</h2>
+    <p class="enquiry-sub" data-i18n="enquiry.sub">Interested in our products? Send your enquiry and we'll get back to you within 24 hours.</p>
 
     <div class="enquiry-form">
-      <input type="text" placeholder="Your Name"         id="eq-name">
-      <input type="tel"  placeholder="Your Phone Number" id="eq-phone">
+      <input type="text" placeholder="Your Name"         id="eq-name"    data-i18n-placeholder="enquiry.name">
+      <input type="tel"  placeholder="Your Phone Number" id="eq-phone"   data-i18n-placeholder="enquiry.phone">
     </div>
     <div class="enquiry-product-wrap">
       <input class="enquiry-product-input" type="text"
              placeholder="Product you're interested in..."
-             id="eq-product">
+             id="eq-product" data-i18n-placeholder="enquiry.product">
     </div>
     <div class="enquiry-send-wrap">
-      <button class="btn btn-primary" id="sendEnquiry">Send Enquiry via WhatsApp</button>
+      <button class="btn btn-primary" id="sendEnquiry" data-i18n="enquiry.send">Send Enquiry via WhatsApp</button>
     </div>
 
-    <!-- Change contact details here -->
     <div class="enquiry-contact">
       <div class="enquiry-contact-item">
         <i class="fa-solid fa-phone"></i>
@@ -363,7 +346,7 @@
       </div>
       <div class="enquiry-contact-item">
         <i class="fa-solid fa-clock"></i>
-        <span>Mon – Sat, 10AM – 6PM</span>
+        <span data-i18n="enquiry.hours">Mon – Sat, 10AM – 6PM</span>
       </div>
     </div>
   </section>
@@ -375,12 +358,10 @@
       <!-- Brand column -->
       <div class="footer-brand">
         <img src="images/logo.jpeg" alt="Royalswad">
-        <!-- Change brand name/tagline below -->
         <div class="footer-brand-name">Royalswad</div>
         <div class="footer-brand-sub">DEEPA Enterprises</div>
-        <p>Rooted in tradition, driven by quality. Manufacturing premium spices, RTE, RTC,
+        <p data-i18n="footer.brand.desc">Rooted in tradition, driven by quality. Manufacturing premium spices, RTE, RTC,
            and dehydrated products with uncompromised hygiene since 2016.</p>
-        <!-- Change social links here (replace # with actual URLs) -->
         <div class="footer-social">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -391,33 +372,33 @@
 
       <!-- Quick Links -->
       <div>
-        <div class="footer-col-title">Quick Links</div>
+        <div class="footer-col-title" data-i18n="footer.quicklinks">Quick Links</div>
         <ul class="footer-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#categories">Products</a></li>
-          <li><a href="#enquiry">Enquiry</a></li>
-          <li><a href="#footer">Contact</a></li>
+          <li><a href="#hero"       data-i18n="footer.link.home">Home</a></li>
+          <li><a href="#about"      data-i18n="footer.link.about">About Us</a></li>
+          <li><a href="#categories" data-i18n="footer.link.products">Products</a></li>
+          <li><a href="#enquiry"    data-i18n="footer.link.enquiry">Enquiry</a></li>
+          <li><a href="#footer"     data-i18n="footer.link.contact">Contact</a></li>
         </ul>
       </div>
 
-      <!-- Products list — add or remove items as needed -->
+      <!-- Products list -->
       <div>
-        <div class="footer-col-title">Products</div>
+        <div class="footer-col-title" data-i18n="footer.products_title">Products</div>
         <ul class="footer-links">
-          <li><a href="#">Dehydrated White Onion</a></li>
-          <li><a href="#">Dehydrated Red Onion</a></li>
-          <li><a href="#">Dehydrated Garlic</a></li>
-          <li><a href="#">Indian Spices</a></li>
-          <li><a href="#">Masala Blends</a></li>
-          <li><a href="#">Frozen Products</a></li>
-          <li><a href="#">RTE &amp; RTC Range</a></li>
+          <li><a href="#" data-i18n="footer.prod.white_onion">Dehydrated White Onion</a></li>
+          <li><a href="#" data-i18n="footer.prod.red_onion">Dehydrated Red Onion</a></li>
+          <li><a href="#" data-i18n="footer.prod.garlic">Dehydrated Garlic</a></li>
+          <li><a href="#" data-i18n="footer.prod.spices">Indian Spices</a></li>
+          <li><a href="#" data-i18n="footer.prod.masala">Masala Blends</a></li>
+          <li><a href="#" data-i18n="footer.prod.frozen">Frozen Products</a></li>
+          <li><a href="#" data-i18n="footer.prod.rte">RTE &amp; RTC Range</a></li>
         </ul>
       </div>
 
-      <!-- Contact Details — change below -->
+      <!-- Contact Details -->
       <div>
-        <div class="footer-col-title">Contact</div>
+        <div class="footer-col-title" data-i18n="footer.contact_title">Contact</div>
         <div class="footer-contact-item">
           <i class="fa-solid fa-phone"></i>
           <span>
@@ -431,23 +412,24 @@
         </div>
         <div class="footer-contact-item">
           <i class="fa-solid fa-clock"></i>
-          <span>Mon – Sat<br>10:00 AM – 6:00 PM</span>
+          <span data-i18n-html="footer.hours">Mon – Sat<br>10:00 AM – 6:00 PM</span>
         </div>
         <div class="footer-contact-item">
           <i class="fa-solid fa-box"></i>
-          <span>All types of Masala, RTE, RTC, Dehydrated &amp; By-Products</span>
+          <span data-i18n="footer.range">All types of Masala, RTE, RTC, Dehydrated &amp; By-Products</span>
         </div>
       </div>
 
     </div>
 
-    <!-- Change copyright year / name / designer credit below -->
     <div class="footer-bottom">
-      <span>© 2016 DEEPA Enterprises (Royalswad). All Rights Reserved.</span>
-      <span>Developed by <a href="#">P_Shinde Developers</a></span>
+      <span data-i18n="footer.copyright">© 2016 DEEPA Enterprises (Royalswad). All Rights Reserved.</span>
+      <span>Design by <a href="https://webmitra.tech" target="_blank" rel="noopener">webmitra.tech</a></span>
     </div>
   </footer>
 
+  <!-- Translations (must come before app.js) -->
+  <script src="translations.js"></script>
   <!-- Main JavaScript -->
   <script src="app.js"></script>
 </body>
