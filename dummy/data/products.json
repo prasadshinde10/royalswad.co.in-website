@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Chicken masala",
+    "description": "A rich spice blend for flavorful chicken curries and gravies.",
+    "image": "images/product-placeholder.svg"
+  },
+  {
+    "name": "Mutton masala",
+    "description": "Bold and aromatic masala crafted for mutton preparations.",
+    "image": "images/product-placeholder.svg"
+  },
+  {
+    "name": "Pavbhaji masala",
+    "description": "Classic Mumbai-style spice mix for pav bhaji and mashed vegetables.",
+    "image": "images/product-placeholder.svg"
+  },
+  {
+    "name": "Sambar masala",
+    "description": "Traditional South Indian blend to make aromatic, tangy sambar.",
+    "image": "images/product-placeholder.svg"
+  },
+  {
+    "name": "Shahi biryani masala",
+    "description": "Royal blend of whole and ground spices for fragrant biryani.",
+    "image": "images/product-placeholder.svg"
+  },
+  {
+    "name": "Dhana powder",
+    "description": "Fresh coriander seed powder for earthy and citrusy flavor.",
+    "image": "images/product-placeholder.svg"
+  },
+  {
+    "name": "Jeera powder",
+    "description": "Warm and nutty cumin powder for everyday Indian cooking.",
+    "image": "images/product-placeholder.svg"
+  },
+  {
+    "name": "Kali miri powder",
+    "description": "Fine black pepper powder for sharp heat and aroma.",
+    "image": "images/product-placeholder.svg"
+  },
+  {
+    "name": "Velchi powder",
+    "description": "Aromatic cardamom powder ideal for sweets and beverages.",
+    "image": "images/product-placeholder.svg"
+  },
+  {
+    "name": "Mirchi powder",
+    "description": "Vibrant red chilli powder to add color and heat to dishes.",
+    "image": "images/product-placeholder.svg"
+  },
+  {
+    "name": "Chicken lollipop masala",
+    "description": "Spicy seasoning mix for crispy and juicy chicken lollipops.",
+    "image": "images/product-placeholder.svg"
+  },
+  {
+    "name": "Sabji masala",
+    "description": "Balanced everyday masala for dry and gravy vegetable dishes.",
+    "image": "images/product-placeholder.svg"
+  },
+  {
+    "name": "Veg biryani masala",
+    "description": "Flavorful spice blend for restaurant-style vegetable biryani.",
+    "image": "images/product-placeholder.svg"
+  }
+]
