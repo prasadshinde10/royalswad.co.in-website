@@ -3,19 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Royalswad Products</title>
+  <title>Royalswad Products | DEEPA Enterprises</title>
+
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts (matches main site) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@400;500;600&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="products.css">
 </head>
 <body>
+
+  <!-- ===== PRODUCTS PAGE HEADER ===== -->
   <header class="page-header">
-    <h1>Our Products</h1>
-    <p>Explore our spice and masala range.</p>
+
+    <!-- Top bar: logo + back link + lang switcher -->
+    <div class="ph-topbar">
+      <a href="index.html" class="ph-back" data-i18n="products.back">&#8592; Back to Home</a>
+
+      <a href="index.html" class="ph-logo-wrap">
+        <img src="images/logo.jpeg" alt="Royalswad Logo" class="ph-logo">
+        <span class="ph-brand">Royalswad</span>
+      </a>
+
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="hi">HI</button>
+        <button class="lang-btn" data-lang="mr">MR</button>
+      </div>
+    </div>
+
+    <!-- Page heading -->
+    <h1 data-i18n="products.heading">Our Products</h1>
+    <p  data-i18n="products.sub">Explore our spice and masala range.</p>
   </header>
 
   <main class="container">
     <section id="productsGrid" class="products-grid" aria-live="polite"></section>
   </main>
 
+  <!-- Translations must load before products.js -->
+  <script src="translations.js"></script>
   <script src="products.js"></script>
 </body>
 </html>
