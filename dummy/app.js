@@ -121,14 +121,58 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-/* ===== LANGUAGE SWITCHER ===== */
-// Basic switcher — connect to your i18n system or expand as needed
-document.querySelector('.lang-select')?.addEventListener('change', function () {
-  const lang = this.value;
-  console.log('Language changed to:', lang);
-  // TODO: add translation logic here
-  // Example: loadTranslations(lang);
-});
+/* ===== LANGUAGE SWITCHER (i18n) ===== */
+// Reads TRANSLATIONS from translations.js (loaded before this script).
+// Saves the chosen language in localStorage and re-renders all
+// data-i18n / data-i18n-html / data-i18n-placeholder elements.
+(function () {
+  const DEFAULT_LANG = 'en';
+
+  function applyTranslations() {
+    const lang = localStorage.getItem('lang') || DEFAULT_LANG;
+    const map  = TRANSLATIONS[lang] || TRANSLATIONS[DEFAULT_LANG];
+    const fb   = TRANSLATIONS[DEFAULT_LANG];
+
+    // Update <html lang> and <title>
+    document.documentElement.lang = lang;
+    if (map.pageTitle) document.title = map.pageTitle;
+
+    // textContent updates (plain text, no HTML markup)
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      el.textContent = key in map ? map[key] : (key in fb ? fb[key] : key);
+    });
+
+    // innerHTML updates (for elements that contain <em>, <br>, etc.)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.dataset.i18nHtml;
+      el.innerHTML = key in map ? map[key] : (key in fb ? fb[key] : key);
+    });
+
+    // placeholder attribute updates
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.dataset.i18nPlaceholder;
+      el.placeholder = key in map ? map[key] : (key in fb ? fb[key] : key);
+    });
+
+    // Mark the active language button
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+
+  // Attach click handlers to every language button (desktop + mobile)
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      localStorage.setItem('lang', btn.dataset.lang);
+      applyTranslations();
+    });
+  });
+
+  // Apply on initial load
+  applyTranslations();
+}());
+
 document.addEventListener("contextmenu",function(e){
   e.preventDefault()
 },false)

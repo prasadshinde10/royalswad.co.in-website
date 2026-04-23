@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse Royalswad product range including premium spice blends and masala products from DEEPA Enterprises.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Royalswad Products | DEEPA Enterprises">
+  <meta property="og:description" content="Explore Royalswad products with authentic Indian spice and masala blends made for rich flavor and quality.">
+  <meta property="og:image" content="https://royalswad.co.in/images/product-placeholder.svg">
+  <meta property="og:url" content="https://royalswad.co.in/products.html">
+  <title>Royalswad Products | DEEPA Enterprises</title>
+
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts (matches main site) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@400;500;600&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="products.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Royalswad Product List",
+      "itemListElement": [
+        { "@type": "Product", "position": 1, "name": "Chicken Masala", "image": "https://royalswad.co.in/images/product-placeholder.svg", "brand": { "@type": "Brand", "name": "Royalswad" } },
+        { "@type": "Product", "position": 2, "name": "Mutton Masala", "image": "https://royalswad.co.in/images/product-placeholder.svg", "brand": { "@type": "Brand", "name": "Royalswad" } },
+        { "@type": "Product", "position": 3, "name": "Pavbhaji Masala", "image": "https://royalswad.co.in/images/product-placeholder.svg", "brand": { "@type": "Brand", "name": "Royalswad" } },
+        { "@type": "Product", "position": 4, "name": "Sambar Masala", "image": "https://royalswad.co.in/images/product-placeholder.svg", "brand": { "@type": "Brand", "name": "Royalswad" } },
+        { "@type": "Product", "position": 5, "name": "Shahi Biryani Masala", "image": "https://royalswad.co.in/images/product-placeholder.svg", "brand": { "@type": "Brand", "name": "Royalswad" } },
+        { "@type": "Product", "position": 6, "name": "Dhana Powder", "image": "https://royalswad.co.in/images/product-placeholder.svg", "brand": { "@type": "Brand", "name": "Royalswad" } },
+        { "@type": "Product", "position": 7, "name": "Jeera Powder", "image": "https://royalswad.co.in/images/product-placeholder.svg", "brand": { "@type": "Brand", "name": "Royalswad" } },
+        { "@type": "Product", "position": 8, "name": "Kali Miri Powder", "image": "https://royalswad.co.in/images/product-placeholder.svg", "brand": { "@type": "Brand", "name": "Royalswad" } },
+        { "@type": "Product", "position": 9, "name": "Velchi Powder", "image": "https://royalswad.co.in/images/product-placeholder.svg", "brand": { "@type": "Brand", "name": "Royalswad" } },
+        { "@type": "Product", "position": 10, "name": "Mirchi Powder", "image": "https://royalswad.co.in/images/product-placeholder.svg", "brand": { "@type": "Brand", "name": "Royalswad" } },
+        { "@type": "Product", "position": 11, "name": "Chicken Lollipop Masala", "image": "https://royalswad.co.in/images/product-placeholder.svg", "brand": { "@type": "Brand", "name": "Royalswad" } },
+        { "@type": "Product", "position": 12, "name": "Sabji Masala", "image": "https://royalswad.co.in/images/product-placeholder.svg", "brand": { "@type": "Brand", "name": "Royalswad" } },
+        { "@type": "Product", "position": 13, "name": "Veg Biryani Masala", "image": "https://royalswad.co.in/images/product-placeholder.svg", "brand": { "@type": "Brand", "name": "Royalswad" } }
+      ]
+    }
+  </script>
+</head>
+<body>
+
+  <!-- ===== PRODUCTS PAGE HEADER ===== -->
+  <header class="page-header">
+
+    <!-- Top bar: logo + back link + lang switcher -->
+    <div class="ph-topbar">
+      <a href="index.html" class="ph-back" data-i18n="products.back">&#8592; Back to Home</a>
+
+      <a href="index.html" class="ph-logo-wrap">
+        <img src="images/logo.jpeg" alt="Royalswad DEEPA Enterprises logo" class="ph-logo">
+        <span class="ph-brand">Royalswad</span>
+      </a>
+
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="hi">HI</button>
+        <button class="lang-btn" data-lang="mr">MR</button>
+      </div>
+    </div>
+
+    <!-- Page heading -->
+    <h1 data-i18n="products.heading">Our Products</h1>
+    <p  data-i18n="products.sub">Explore our spice and masala range.</p>
+  </header>
+
+  <main class="container">
+    <section id="productsGrid" class="products-grid" aria-live="polite"></section>
+  </main>
+
+  <!-- Translations must load before products.js -->
+  <script src="translations.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>
