@@ -39,7 +39,7 @@ body {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -180,6 +180,20 @@ body { cursor: auto; }
 }
 
 @media (max-width: 480px) {
-  .ph-topbar { justify-content: center; }
-  .ph-back   { order: 3; }
+  .ph-topbar {
+    justify-content: center;
+    padding: 0.9rem 0.85rem;
+  }
+  .ph-back   { order: 3; width: 100%; text-align: center; }
+  .ph-logo { width: 54px; height: 54px; }
+  .ph-brand { font-size: 1.25rem; }
+  .container { width: 94%; }
+}
+
+@media (max-width: 900px) {
+  .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .products-grid { grid-template-columns: 1fr; }
 }
