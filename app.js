@@ -109,7 +109,7 @@ function getProductsData() {
 }
 
 function buildCategoryUrl(category) {
-  return `/products.html?category=${encodeURIComponent(category)}`;
+  return `products.html?category=${encodeURIComponent(category)}`;
 }
 
 function openCategoryEnquiry(category) {

@@ -149,15 +149,19 @@ function applyCategoryContext(productCount) {
   }
 }
 
+function renderActiveProducts(products) {
+  const filtered = getFilteredProducts(products);
+  renderProducts(filtered);
+  applyCategoryContext(filtered.length);
+  if (activeCategory && filtered.length === 0) showCategoryFallback();
+}
+
 /* ---- data loading ---- */
 let _cachedProducts = null;
 
 async function loadProducts() {
   if (_cachedProducts) {
-    const filtered = getFilteredProducts(_cachedProducts);
-    renderProducts(filtered);
-    applyCategoryContext(filtered.length);
-    if (activeCategory && filtered.length === 0) showCategoryFallback();
+    renderActiveProducts(_cachedProducts);
     return;
   }
   try {
@@ -169,10 +173,7 @@ async function loadProducts() {
       return;
     }
     _cachedProducts = products;
-    const filtered = getFilteredProducts(products);
-    renderProducts(filtered);
-    applyCategoryContext(filtered.length);
-    if (activeCategory && filtered.length === 0) showCategoryFallback();
+    renderActiveProducts(products);
   } catch (err) {
     showMessage('Unable to load products at the moment.');
     console.error(err);
@@ -185,12 +186,7 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
     localStorage.setItem('lang', btn.dataset.lang);
     applyPageTranslations();
     /* Re-render product cards with new language */
-    if (_cachedProducts) {
-      const filtered = getFilteredProducts(_cachedProducts);
-      renderProducts(filtered);
-      applyCategoryContext(filtered.length);
-      if (activeCategory && filtered.length === 0) showCategoryFallback();
-    }
+    if (_cachedProducts) renderActiveProducts(_cachedProducts);
   });
 });
 
