@@ -2,66 +2,115 @@
   {
     "name": "Chicken masala",
     "description": "A rich spice blend for flavorful chicken curries and gravies.",
-    "image": "images/product-placeholder.svg"
+    "image": "images/product-placeholder.svg",
+    "category": "indian-spices"
   },
   {
     "name": "Mutton masala",
     "description": "Bold and aromatic masala crafted for mutton preparations.",
-    "image": "images/product-placeholder.svg"
+    "image": "images/product-placeholder.svg",
+    "category": "indian-spices"
   },
   {
     "name": "Pavbhaji masala",
     "description": "Classic Mumbai-style spice mix for pav bhaji and mashed vegetables.",
-    "image": "images/product-placeholder.svg"
+    "image": "images/product-placeholder.svg",
+    "category": "indian-spices"
   },
   {
     "name": "Sambar masala",
     "description": "Traditional South Indian blend to make aromatic, tangy sambar.",
-    "image": "images/product-placeholder.svg"
+    "image": "images/product-placeholder.svg",
+    "category": "indian-spices"
   },
   {
     "name": "Shahi biryani masala",
     "description": "Royal blend of whole and ground spices for fragrant biryani.",
-    "image": "images/product-placeholder.svg"
+    "image": "images/product-placeholder.svg",
+    "category": "indian-spices"
   },
   {
     "name": "Dhana powder",
     "description": "Fresh coriander seed powder for earthy and citrusy flavor.",
-    "image": "images/product-placeholder.svg"
+    "image": "images/product-placeholder.svg",
+    "category": "indian-spices"
   },
   {
     "name": "Jeera powder",
     "description": "Warm and nutty cumin powder for everyday Indian cooking.",
-    "image": "images/product-placeholder.svg"
+    "image": "images/product-placeholder.svg",
+    "category": "indian-spices"
   },
   {
     "name": "Kali miri powder",
     "description": "Fine black pepper powder for sharp heat and aroma.",
-    "image": "images/product-placeholder.svg"
+    "image": "images/product-placeholder.svg",
+    "category": "indian-spices"
   },
   {
     "name": "Velchi powder",
     "description": "Aromatic cardamom powder ideal for sweets and beverages.",
-    "image": "images/product-placeholder.svg"
+    "image": "images/product-placeholder.svg",
+    "category": "indian-spices"
   },
   {
     "name": "Mirchi powder",
     "description": "Vibrant red chilli powder to add color and heat to dishes.",
-    "image": "images/product-placeholder.svg"
+    "image": "images/product-placeholder.svg",
+    "category": "indian-spices"
   },
   {
     "name": "Chicken lollipop masala",
     "description": "Spicy seasoning mix for crispy and juicy chicken lollipops.",
-    "image": "images/product-placeholder.svg"
+    "image": "images/product-placeholder.svg",
+    "category": "indian-spices"
   },
   {
     "name": "Sabji masala",
     "description": "Balanced everyday masala for dry and gravy vegetable dishes.",
-    "image": "images/product-placeholder.svg"
+    "image": "images/product-placeholder.svg",
+    "category": "indian-spices"
   },
   {
     "name": "Veg biryani masala",
     "description": "Flavorful spice blend for restaurant-style vegetable biryani.",
-    "image": "images/product-placeholder.svg"
+    "image": "images/product-placeholder.svg",
+    "category": "indian-spices"
+  },
+  {
+    "name": "Instant poha mix",
+    "description": "Quick ready-to-cook poha mix for a light and flavorful breakfast.",
+    "image": "images/product-placeholder.svg",
+    "category": "ready-to-eat-cook"
+  },
+  {
+    "name": "Instant upma mix",
+    "description": "Savory semolina blend with spices for convenient daily cooking.",
+    "image": "images/product-placeholder.svg",
+    "category": "ready-to-eat-cook"
+  },
+  {
+    "name": "Ready-to-cook biryani kit",
+    "description": "Complete biryani base mix for rich aroma and consistent taste.",
+    "image": "images/product-placeholder.svg",
+    "category": "ready-to-eat-cook"
+  },
+  {
+    "name": "Dehydrated white onion flakes",
+    "description": "Premium white onion flakes for soups, gravies, and seasoning blends.",
+    "image": "images/product-placeholder.svg",
+    "category": "dehydrated-products"
+  },
+  {
+    "name": "Dehydrated red onion powder",
+    "description": "Intense onion flavor powder for marinades and instant spice mixes.",
+    "image": "images/product-placeholder.svg",
+    "category": "dehydrated-products"
+  },
+  {
+    "name": "Dehydrated garlic minced",
+    "description": "Easy-to-use minced garlic for fast prep and strong aroma retention.",
+    "image": "images/product-placeholder.svg",
+    "category": "dehydrated-products"
   }
 ]

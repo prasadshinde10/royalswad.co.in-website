@@ -179,6 +179,40 @@ body { cursor: auto; }
   padding: 0 1rem;
 }
 
+.products-quick-links {
+  width: min(1100px, 92%);
+  margin: 0 auto 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0 0.75rem;
+}
+
+.products-quick-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: rgba(13, 11, 8, 0.82);
+  border: 1px solid rgba(201, 168, 76, 0.45);
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+.products-quick-links a i { color: var(--gold-dark); }
+
+.products-quick-links a:hover {
+  border-color: var(--gold);
+  color: var(--dark);
+  transform: translateY(-1px);
+}
+
 @media (max-width: 480px) {
   .ph-topbar {
     justify-content: center;
@@ -188,6 +222,8 @@ body { cursor: auto; }
   .ph-logo { width: 54px; height: 54px; }
   .ph-brand { font-size: 1.25rem; }
   .container { width: 94%; }
+  .products-quick-links { justify-content: stretch; }
+  .products-quick-links a { width: 100%; justify-content: center; }
 }
 
 @media (max-width: 900px) {

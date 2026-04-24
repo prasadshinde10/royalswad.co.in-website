@@ -8,6 +8,15 @@
 const productsGrid  = document.getElementById('productsGrid');
 const FALLBACK_IMAGE = 'images/product-placeholder.svg';
 const DEFAULT_LANG   = 'en';
+const WHATSAPP_NUMBER = '917262038383';
+const productsHeading = document.getElementById('productsHeading');
+const productsSubheading = document.getElementById('productsSubheading');
+const CATEGORY_LABELS = {
+  'indian-spices': 'Indian Spices',
+  'ready-to-eat-cook': 'Ready to Eat & Cook',
+  'dehydrated-products': 'Dehydrated Products'
+};
+const activeCategory = new URLSearchParams(window.location.search).get('category');
 
 if (!productsGrid) {
   console.error('Products grid container not found.');
@@ -67,6 +76,19 @@ function showMessage(msg) {
   productsGrid.append(p);
 }
 
+function showCategoryFallback() {
+  if (!activeCategory) return;
+  const label = CATEGORY_LABELS[activeCategory] || activeCategory;
+  const message = encodeURIComponent(
+    `Hello Royalswad!\n\nI am interested in your ${label} range.\nPlease share available products and pricing.`
+  );
+
+  const wrap = document.createElement('div');
+  wrap.className = 'message';
+  wrap.innerHTML = `No products are listed in this category yet. <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${message}" target="_blank" rel="noopener">Contact us on WhatsApp</a>.`;
+  productsGrid.append(wrap);
+}
+
 function getSafeImagePath(imagePath) {
   return typeof imagePath === 'string' && imagePath.startsWith('images/')
     ? imagePath
@@ -111,11 +133,37 @@ function renderProducts(products) {
   });
 }
 
+function getFilteredProducts(products) {
+  if (!activeCategory) return products;
+  return products.filter(product => product?.category === activeCategory);
+}
+
+function applyCategoryContext(productCount) {
+  if (!activeCategory) return;
+  const categoryLabel = CATEGORY_LABELS[activeCategory] || 'Selected Category';
+  if (productsHeading) productsHeading.textContent = `${categoryLabel} Products`;
+  if (productsSubheading) {
+    productsSubheading.textContent = productCount > 0
+      ? `Showing ${productCount} products in ${categoryLabel}.`
+      : `No listed products in ${categoryLabel} right now. Contact us for the latest availability.`;
+  }
+}
+
+function renderActiveProducts(products) {
+  const filtered = getFilteredProducts(products);
+  renderProducts(filtered);
+  applyCategoryContext(filtered.length);
+  if (activeCategory && filtered.length === 0) showCategoryFallback();
+}
+
 /* ---- data loading ---- */
 let _cachedProducts = null;
 
 async function loadProducts() {
-  if (_cachedProducts) { renderProducts(_cachedProducts); return; }
+  if (_cachedProducts) {
+    renderActiveProducts(_cachedProducts);
+    return;
+  }
   try {
     const response = await fetch('data/products.json');
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -125,7 +173,7 @@ async function loadProducts() {
       return;
     }
     _cachedProducts = products;
-    renderProducts(products);
+    renderActiveProducts(products);
   } catch (err) {
     showMessage('Unable to load products at the moment.');
     console.error(err);
@@ -138,7 +186,7 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
     localStorage.setItem('lang', btn.dataset.lang);
     applyPageTranslations();
     /* Re-render product cards with new language */
-    if (_cachedProducts) renderProducts(_cachedProducts);
+    if (_cachedProducts) renderActiveProducts(_cachedProducts);
   });
 });
 
