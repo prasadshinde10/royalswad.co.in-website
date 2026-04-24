@@ -89,6 +89,71 @@ document.querySelectorAll('.products-grid, .categories-grid, .why-grid').forEach
 /* ===== WHATSAPP ENQUIRY FORM ===== */
 // ↓ Change this phone number to your WhatsApp business number
 const WHATSAPP_NUMBER = '917262038383';
+const CATEGORY_LABELS = {
+  'indian-spices': 'Indian Spices',
+  'ready-to-eat-cook': 'Ready to Eat & Cook',
+  'dehydrated-products': 'Dehydrated Products'
+};
+
+let _productsDataPromise = null;
+
+function getProductsData() {
+  if (_productsDataPromise) return _productsDataPromise;
+  _productsDataPromise = fetch('data/products.json')
+    .then(response => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    })
+    .then(products => Array.isArray(products) ? products : []);
+  return _productsDataPromise;
+}
+
+function buildCategoryUrl(category) {
+  return `/products.html?category=${encodeURIComponent(category)}`;
+}
+
+function openCategoryEnquiry(category) {
+  const label = CATEGORY_LABELS[category] || category;
+  const message = encodeURIComponent(
+    `Hello Royalswad!\n\nI am interested in your ${label} range.\nPlease share product details and pricing.`
+  );
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
+}
+
+async function onCategoryCardClick(event) {
+  event.preventDefault();
+  const category = event.currentTarget.dataset.category;
+  if (!category) return;
+
+  try {
+    const products = await getProductsData();
+    const hasProducts = products.some(product => product?.category === category);
+    if (hasProducts) {
+      window.location.href = buildCategoryUrl(category);
+      return;
+    }
+    openCategoryEnquiry(category);
+  } catch (error) {
+    console.error(error);
+    window.location.href = buildCategoryUrl(category);
+  }
+}
+
+function bindCategoryNavigation() {
+  document.querySelectorAll('.category-card[data-category]').forEach(card => {
+    card.setAttribute('role', 'link');
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('click', onCategoryCardClick);
+    card.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        card.click();
+      }
+    });
+  });
+}
+
+bindCategoryNavigation();
 
 document.getElementById('sendEnquiry')?.addEventListener('click', () => {
   const name    = document.getElementById('eq-name').value.trim();
