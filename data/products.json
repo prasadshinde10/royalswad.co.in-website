@@ -80,38 +80,38 @@
   {
     "name": "Instant poha mix",
     "description": "Quick ready-to-cook poha mix for a light and flavorful breakfast.",
-    "image": "images/authentic poha.jpeg",
+    "image": "images/authentic-poha.jpeg",
     "category": "ready-to-eat-cook"
   },
   {
     "name": "Instant upma mix",
     "description": "Savory semolina blend with spices for convenient daily cooking.",
-    "image": "images/authentic upma.jpeg",
+    "image": "images/authentic-upma.jpeg",
     "category": "ready-to-eat-cook"
   },
   {
     "name": "Ready-to-cook biryani kit",
     "description": "Complete biryani base mix for rich aroma and consistent taste.",
-    "image": "images/vegetable pulav.jpeg",
+    "image": "images/vegetable-pulav.jpeg",
     "category": "ready-to-eat-cook"
   },
   {
     "name": "Authentic Sheera",
     "category": "ready-to-eat-cook",
     "description": "A traditional semolina dessert made with pure ghee and cardamom.",
-    "image": "images/banana shira.jpeg"
+    "image": "images/banana-shira.jpeg"
   },
   {
     "name": "Authentic Pineapple Sheera",
     "category": "ready-to-eat-cook",
     "description": "Classic sheera infused with real pineapple chunks for a tangy twist.",
-    "image": "images/pineapple shira.jpeg"
+    "image": "images/pineapple-shira.jpeg"
   },
   {
     "name": "Authentic Dum Vegetable Biryani",
     "category": "ready-to-eat-cook",
     "description": "Fragrant basmati rice cooked with garden-fresh vegetables and secret spices.",
-    "image": "images/authentic dum vegitabl.jpeg"
+    "image": "images/authentic-dum-vegetable.jpeg"
   },
   {
     "name": "Dehydrated white onion flakes",
